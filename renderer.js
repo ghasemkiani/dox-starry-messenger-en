@@ -10,7 +10,7 @@ import {css} from "@ghasemkiani/wdom";
 const {Stylesheet} = css;
 import {tags, tagsXHtml} from "./tags.js";
 import {Context} from "./context.js";
-import {XHtmlElementComponent} from "./xhtml-element-component.js";
+import {XHtmlElementComponent} from "./components/xhtml-element-component.js";
 
 class Renderer extends RendererBase {
 	getElementComponent(wnode) {

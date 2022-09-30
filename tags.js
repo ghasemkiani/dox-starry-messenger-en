@@ -1,3 +1,4 @@
+import {XHtmlElementComponent} from "./components/xhtml-element-component.js";
 import {Group} from "./components/group.js";
 import {Include} from "./components/include.js";
 import {Merge} from "./components/merge.js";
@@ -22,6 +23,7 @@ const tagsXHtml = {
 };
 
 export {
+	XHtmlElementComponent,
 	tags,
 	tagsXHtml,
 	Group,

@@ -2,12 +2,13 @@ import {cutil} from "@ghasemkiani/base";
 import {ElementComponent} from "@ghasemkiani/dox";
 
 class XHtmlElementComponent extends ElementComponent {
-	render(wnode) {
+	async toRender(wnode) {
 		let {context} = this;
 		const CLS_SANS = "eSANS_Sackers_Gothic_Std_Light_11";
 		if (this.wnode.cls()[CLS_SANS]) {
 			this.wnode.cls({[CLS_SANS]: false});
 		}
+		let wn;
 		wnode.cx(this.wnode.name, this.wnode.ns, wnode => {
 			let id = null;
 			for(let k of this.wnode.node.getAttributeNames()) {
@@ -28,8 +29,9 @@ class XHtmlElementComponent extends ElementComponent {
 					wnode.attr("name", name);
 				});
 			}
-			this.renderBody(wnode);
+			wn = wnode;
 		});
+		await this.toRenderBody(wn);
 	}
 }
 cutil.extend(XHtmlElementComponent.prototype, {

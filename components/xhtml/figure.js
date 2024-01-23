@@ -4,7 +4,7 @@ import {cutil} from "@ghasemkiani/base";
 import {Component} from "@ghasemkiani/dox";
 
 class Figure extends Component {
-	render(wnode) {
+	async toRender(wnode) {
 		let component = this;
 		let {context} = component;
 		if (component.wnode.cls()["IMG"] || component.wnode.cls()["TIT"]) {

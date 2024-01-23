@@ -6,7 +6,7 @@ import {Component} from "@ghasemkiani/dox";
 import {WDocument} from "@ghasemkiani/wjsdom";
 
 class Include extends Component {
-	render(wnode) {
+	async toRender(wnode) {
 		let component = this;
 		let {context} = component;
 		let {base} = context;

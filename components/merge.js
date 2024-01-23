@@ -6,7 +6,7 @@ import {css} from "@ghasemkiani/wdom";
 const {Stylesheet} = css;
 
 class Merge extends Component {
-	render(wnode) {
+	async toRender(wnode) {
 		let component = this;
 		let {context} = component;
 		let {renderer} = context;
